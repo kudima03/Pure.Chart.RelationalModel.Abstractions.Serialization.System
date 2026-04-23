@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11716.218 insiders
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6A1F8E31-7DC1-44C2-AEA6-12D2BFE2087B}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pure.Chart.RelationalModel.Abstractions.Serialization.System", "Pure.Chart.RelationalModel.Abstractions.Serialization.System\Pure.Chart.RelationalModel.Abstractions.Serialization.System.csproj", "{CBD13396-B6FF-ECF2-4048-DE0E1A6B44B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{06BF8952-7033-49BC-8A86-DE278361A53F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pure.Chart.RelationalModel.Abstractions.Serialization.System.Tests", "Tests\Pure.Chart.RelationalModel.Abstractions.Serialization.System.Tests\Pure.Chart.RelationalModel.Abstractions.Serialization.System.Tests.csproj", "{C0AC89E8-8AED-A303-D155-784DCDDBE4AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBD13396-B6FF-ECF2-4048-DE0E1A6B44B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBD13396-B6FF-ECF2-4048-DE0E1A6B44B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBD13396-B6FF-ECF2-4048-DE0E1A6B44B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBD13396-B6FF-ECF2-4048-DE0E1A6B44B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0AC89E8-8AED-A303-D155-784DCDDBE4AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0AC89E8-8AED-A303-D155-784DCDDBE4AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0AC89E8-8AED-A303-D155-784DCDDBE4AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0AC89E8-8AED-A303-D155-784DCDDBE4AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C0AC89E8-8AED-A303-D155-784DCDDBE4AA} = {06BF8952-7033-49BC-8A86-DE278361A53F}
+	EndGlobalSection
+EndGlobal
