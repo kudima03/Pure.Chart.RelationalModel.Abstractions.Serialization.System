@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageId>Pure.Chart.RelationalModel.Abstractions.Serialization.System</PackageId>
+    <RootNamespace>Pure.Chart.RelationalModel.Abstractions.Serialization.System</RootNamespace>
+    <AssemblyName>Pure.Chart.RelationalModel.Abstractions.Serialization.System</AssemblyName>
+    <Authors>Dmitry Kurochkin</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/kudima03/Pure.Chart.RelationalModel.Abstractions.Serialization.System</PackageProjectUrl>
+  </PropertyGroup>
 </Project>
