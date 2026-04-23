@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFrameworks>net7.0;net8.0;net9.0;net10.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -9,7 +8,6 @@
     <!--<EnablePackageValidation>true</EnablePackageValidation>
     <PackageValidationBaselineVersion>0.1.0-preview.0.1.0</PackageValidationBaselineVersion>-->
   </PropertyGroup>
-
   <PropertyGroup>
     <PackageId>Pure.Chart.RelationalModel.Abstractions.Serialization.System</PackageId>
     <RootNamespace>Pure.Chart.RelationalModel.Abstractions.Serialization.System</RootNamespace>
