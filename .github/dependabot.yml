@@ -2,8 +2,8 @@ version: 2
 updates:
 - package-ecosystem: nuget
   directories:
-    - "src/"
-    - "src/Tests/"
+    - "src/Pure.Chart.RelationalModel.Abstractions.Serialization.System"
+    - "src/Tests/Pure.Chart.RelationalModel.Abstractions.Serialization.System.Tests"
   schedule:
     interval: daily
 - package-ecosystem: "github-actions"
