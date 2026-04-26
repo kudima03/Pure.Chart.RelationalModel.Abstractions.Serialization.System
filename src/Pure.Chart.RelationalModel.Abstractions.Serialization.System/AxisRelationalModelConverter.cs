@@ -8,18 +8,15 @@ namespace Pure.Chart.RelationalModel.Abstractions.Serialization.System;
 internal sealed record AxisRelationalModelJsonModel : IAxisRelationalModel
 {
     public AxisRelationalModelJsonModel(IAxisRelationalModel model)
-        : this(model.Id, model.ChartId, model.Legend) { }
+        : this(model.Id, model.Legend) { }
 
-    public AxisRelationalModelJsonModel(IGuid id, IGuid chartId, IString legend)
+    public AxisRelationalModelJsonModel(IGuid id, IString legend)
     {
         Id = id;
-        ChartId = chartId;
         Legend = legend;
     }
 
     public IGuid Id { get; }
-
-    public IGuid ChartId { get; }
 
     public IString Legend { get; }
 }
