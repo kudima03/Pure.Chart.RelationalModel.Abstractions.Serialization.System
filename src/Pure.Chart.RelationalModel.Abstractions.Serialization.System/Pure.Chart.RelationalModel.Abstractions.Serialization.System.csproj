@@ -19,7 +19,7 @@
   <ItemGroup>
     <PackageReference
       Include="Pure.Chart.RelationalModel.Abstractions"
-      Version="0.1.0-preview.5.0.0"
+      Version="0.1.0-preview.6.0.0"
     />
   </ItemGroup>
 </Project>
