@@ -10,6 +10,7 @@ internal sealed record AxisRelationalModelJsonModel : IAxisRelationalModel
     public AxisRelationalModelJsonModel(IAxisRelationalModel model)
         : this(model.Id, model.Legend) { }
 
+    [JsonConstructor]
     public AxisRelationalModelJsonModel(IGuid id, IString legend)
     {
         Id = id;
