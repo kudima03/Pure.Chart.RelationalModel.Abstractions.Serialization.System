@@ -11,7 +11,7 @@
     <PackageReference Include="Pure.Chart.RelationalModel" Version="0.1.0-preview.3.0.0" />
     <PackageReference
       Include="Pure.Chart.RelationalModel.HashCodes"
-      Version="0.1.0-preview.1.0.0"
+      Version="0.1.0-preview.2.0.0"
     />
     <PackageReference
       Include="Pure.Primitives.Abstractions.Serialization.System"
