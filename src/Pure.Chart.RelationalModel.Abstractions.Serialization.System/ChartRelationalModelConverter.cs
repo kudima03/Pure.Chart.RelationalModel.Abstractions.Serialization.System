@@ -18,6 +18,7 @@ internal sealed record ChartRelationalModelJsonModel : IChartRelationalModel
         )
     { }
 
+    [JsonConstructor]
     public ChartRelationalModelJsonModel(
         IGuid id,
         IString title,
