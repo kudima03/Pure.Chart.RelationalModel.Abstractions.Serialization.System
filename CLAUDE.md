@@ -15,6 +15,8 @@ dotnet test --no-build --verbosity normal      # run xUnit tests
 dotnet pack --configuration Release -p:Version=<version> --output .
 ```
 
+CI additionally passes `-p:AssemblyVersion` (pinned to the major) and `-p:FileVersion`; see `.github/workflows/publish-nuget.yml`.
+
 ## Architecture
 
 This is a **JSON serialization library** — no domain logic, just `System.Text.Json` converter implementations for chart relational model interfaces.
