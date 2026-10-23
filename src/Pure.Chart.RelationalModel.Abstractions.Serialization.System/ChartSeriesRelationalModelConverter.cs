@@ -13,7 +13,8 @@ internal sealed record ChartSeriesRelationalModelJsonModel : IChartSeriesRelatio
             model.ChartId,
             model.Legend,
             model.XAxisSource,
-            model.YAxisSource
+            model.YAxisSource,
+            model.LineType
         )
     { }
 
@@ -23,7 +24,8 @@ internal sealed record ChartSeriesRelationalModelJsonModel : IChartSeriesRelatio
         IGuid chartId,
         IString legend,
         IString xAxisSource,
-        IString yAxisSource
+        IString yAxisSource,
+        IString lineType
     )
     {
         Id = id;
@@ -31,6 +33,7 @@ internal sealed record ChartSeriesRelationalModelJsonModel : IChartSeriesRelatio
         Legend = legend;
         XAxisSource = xAxisSource;
         YAxisSource = yAxisSource;
+        LineType = lineType;
     }
 
     public IGuid Id { get; }
@@ -42,6 +45,8 @@ internal sealed record ChartSeriesRelationalModelJsonModel : IChartSeriesRelatio
     public IString XAxisSource { get; }
 
     public IString YAxisSource { get; }
+
+    public IString LineType { get; }
 }
 
 public sealed class ChartSeriesRelationalModelConverter

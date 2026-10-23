@@ -9,7 +9,7 @@
 
 ## Overview
 
-`Pure.Chart.RelationalModel.Abstractions.Serialization.System` provides `System.Text.Json` converters that serialize and deserialize the chart relational model interfaces defined in [`Pure.Chart.RelationalModel.Abstractions`](https://github.com/kudima03/Pure.Chart.RelationalModel.Abstractions/tree/0.1.0-preview.6.0.0). Each interface maps to a custom `JsonConverter<T>` backed by an internal sealed record that carries `[JsonConstructor]` for round-trip fidelity.
+`Pure.Chart.RelationalModel.Abstractions.Serialization.System` provides `System.Text.Json` converters that serialize and deserialize the chart relational model interfaces defined in [`Pure.Chart.RelationalModel.Abstractions`](https://github.com/kudima03/Pure.Chart.RelationalModel.Abstractions/tree/0.1.0-preview.7.0.0). Each interface maps to a custom `JsonConverter<T>` backed by an internal sealed record that carries `[JsonConstructor]` for round-trip fidelity.
 
 ## Converters
 
@@ -28,7 +28,7 @@
 
 ## Dependencies
 
-- [`Pure.Chart.RelationalModel.Abstractions`](https://github.com/kudima03/Pure.Chart.RelationalModel.Abstractions/tree/0.1.0-preview.6.0.0) — read-only interfaces for chart, axis, series, and chart-type relational models
+- [`Pure.Chart.RelationalModel.Abstractions`](https://github.com/kudima03/Pure.Chart.RelationalModel.Abstractions/tree/0.1.0-preview.7.0.0) — read-only interfaces for chart, axis, series, and chart-type relational models
 
 ## Target Frameworks
 
