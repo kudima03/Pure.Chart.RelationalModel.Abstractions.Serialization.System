@@ -38,13 +38,15 @@ public sealed record ChartSeriesRelationalModelConverterTests
         RandomString legend = new RandomString(new Char('a'), new Char('z'));
         RandomString xAxisSource = new RandomString(new Char('a'), new Char('z'));
         RandomString yAxisSource = new RandomString(new Char('a'), new Char('z'));
+        RandomString lineType = new RandomString(new Char('a'), new Char('z'));
 
-        IChartSeriesRelationalModel series = new ChartSeriesRelationalModel(
+        IChartSeriesRelationalModel series = new FakeChartSeriesRelationalModel(
             id,
             chartId,
             legend,
             xAxisSource,
-            yAxisSource
+            yAxisSource,
+            lineType
         );
 
         string serialized = JsonSerializer.Serialize(series, _options);
@@ -56,7 +58,8 @@ public sealed record ChartSeriesRelationalModelConverterTests
               "ChartId": "{{chartId.GuidValue}}",
               "Legend": "{{legend.TextValue}}",
               "XAxisSource": "{{xAxisSource.TextValue}}",
-              "YAxisSource": "{{yAxisSource.TextValue}}"
+              "YAxisSource": "{{yAxisSource.TextValue}}",
+              "LineType": "{{lineType.TextValue}}"
             }
             """,
             serialized
@@ -71,13 +74,15 @@ public sealed record ChartSeriesRelationalModelConverterTests
         RandomString legend = new RandomString(new Char('a'), new Char('z'));
         RandomString xAxisSource = new RandomString(new Char('a'), new Char('z'));
         RandomString yAxisSource = new RandomString(new Char('a'), new Char('z'));
+        RandomString lineType = new RandomString(new Char('a'), new Char('z'));
 
-        IChartSeriesRelationalModel expected = new ChartSeriesRelationalModel(
+        IChartSeriesRelationalModel expected = new FakeChartSeriesRelationalModel(
             id,
             chartId,
             legend,
             xAxisSource,
-            yAxisSource
+            yAxisSource,
+            lineType
         );
 
         string input = $$"""
@@ -86,25 +91,29 @@ public sealed record ChartSeriesRelationalModelConverterTests
               "ChartId": "{{chartId.GuidValue}}",
               "Legend": "{{legend.TextValue}}",
               "XAxisSource": "{{xAxisSource.TextValue}}",
-              "YAxisSource": "{{yAxisSource.TextValue}}"
+              "YAxisSource": "{{yAxisSource.TextValue}}",
+              "LineType": "{{lineType.TextValue}}"
             }
             """;
 
+        IChartSeriesRelationalModel deserialized =
+            JsonSerializer.Deserialize<IChartSeriesRelationalModel>(input, _options)!;
+
         Assert.True(
             new ChartSeriesRelationalModelHash(expected).SequenceEqual(
-                new ChartSeriesRelationalModelHash(
-                    JsonSerializer.Deserialize<IChartSeriesRelationalModel>(input, _options)!
-                )
+                new ChartSeriesRelationalModelHash(deserialized)
             )
         );
+        Assert.Equal(lineType.TextValue, deserialized.LineType.TextValue);
     }
 
     [Fact]
     public void RoundTrip()
     {
-        IChartSeriesRelationalModel series = new ChartSeriesRelationalModel(
+        IChartSeriesRelationalModel series = new FakeChartSeriesRelationalModel(
             new Guid(),
             new Guid(),
+            new RandomString(new Char('a'), new Char('z')),
             new RandomString(new Char('a'), new Char('z')),
             new RandomString(new Char('a'), new Char('z')),
             new RandomString(new Char('a'), new Char('z'))
@@ -121,5 +130,6 @@ public sealed record ChartSeriesRelationalModelConverterTests
                 new ChartSeriesRelationalModelHash(deserialized)
             )
         );
+        Assert.Equal(series.LineType.TextValue, deserialized.LineType.TextValue);
     }
 }
