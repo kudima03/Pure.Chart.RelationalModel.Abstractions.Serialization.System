@@ -35,7 +35,7 @@ This is a **JSON serialization library** — no domain logic, just `System.Text.
 
 **Dependency:** `Pure.Chart.RelationalModel.Abstractions` defines the four interfaces (`IChartRelationalModel`, `IChartSeriesRelationalModel`, `IAxisRelationalModel`, `IChartTypeRelationalModel`). This package provides the `System.Text.Json` serialization layer on top of those abstractions.
 
-**Multi-targeting:** net7.0, net8.0, net9.0, net10.0. `IsAotCompatible` is `false` because the converters rely on reflection-based `System.Text.Json` behaviour.
+**Multi-targeting:** net7.0, net8.0, net9.0, net10.0, net11.0. `IsAotCompatible` is `false` because the converters rely on reflection-based `System.Text.Json` behaviour.
 
 **Package validation:** `EnablePackageValidation = true` with `PackageValidationBaselineVersion = 0.1.0-preview.2.0.0`. Breaking API changes fail the build.
 
